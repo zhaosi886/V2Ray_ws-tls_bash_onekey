@@ -291,23 +291,25 @@ v2ray_conf_add(){
     rm -rf ${v2ray_conf}
     rm -rf ${client_conf}
     cd /etc/v2ray
-    wget  https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/http2/config.json
+    # wget  https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/http2/config.json
+    wget https://raw.githubusercontent.com/zhaosi886/V2Ray_ws-tls_bash_onekey/master/http2/config.json
     judge "config.json 下载"
-    wget  https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/http2/client.json
+    # wget  https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/http2/client.json
+    wget https://raw.githubusercontent.com/zhaosi886/V2Ray_ws-tls_bash_onekey/master/http2/client.json
     judge "client.json 下载"
     random_UUID
     modify_port_UUID ${v2ray_conf}
     judge "config.json 配置变更"
     modify_port_UUID ${client_conf}
     judge "client.json 配置变更"
-    json_addr=`curl --upload-file ${client_conf} https://transfer.sh/wulabing_${camouflage}_${UUID}.json`
+    # json_addr=`curl --upload-file ${client_conf} https://transfer.sh/wulabing_${camouflage}_${UUID}.json`
 }
 
 vmess_qr_config(){
     cat >/etc/v2ray/vmess_qr.json <<-EOF
 {
   "v": "2",
-  "ps": "wulabing_${domain}",
+  "ps": "chunhua_${domain}",
   "add": "${domain}",
   "port": "${port}",
   "id": "${UUID}",
