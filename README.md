@@ -60,7 +60,7 @@ bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_o
 ```
 Vmess + HTTP2 over TLS
 ```
-bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install_h2.sh) | tee v2ray_ins_h2.log
+bash <(curl -L -s https://raw.githubusercontent.com/zhaosi886/V2Ray_ws-tls_bash_onekey/master/install_h2.sh) | tee v2ray_ins_h2.log
 ```
 ### 启动方式
 
